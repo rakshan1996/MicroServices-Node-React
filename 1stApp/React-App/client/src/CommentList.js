@@ -20,7 +20,7 @@ export default({postId})=>{
         </li>;
     });
 
-    return <ul>
+    return <ul className="mb-2">
         {renderComments}
     </ul>;
 };
