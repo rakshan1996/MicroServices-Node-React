@@ -33,7 +33,7 @@ res.status(201).send(posts[id]);
 
 
 app.post('/events',(req,res) => {
-console.log(`Received Event:${req.body.type}`);
+res.send({});
 });
 
 app.listen(4000,()=>{

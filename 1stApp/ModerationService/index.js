@@ -21,7 +21,7 @@ app.post('/events',async (req,res)=>{
 
     }
 
-    res.send();
+    res.send({});
 });
 
 
