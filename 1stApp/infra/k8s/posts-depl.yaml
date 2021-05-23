@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: posts
-          image: thapar/postservice
+          image: thapar/postservice:0.0.3
