@@ -12,11 +12,11 @@ const events=[];
 app.post('/events',(req,res) => {
     const event =req.body;
     events.push(event);
-
-    axios.post('http://localhost:4000/events',event).catch((err)=>{console.log(err.message)});
-    axios.post('http://localhost:4001/events', event).catch((err) => { console.log(err.message) });
-    axios.post('http://localhost:4002/events', event).catch((err) => { console.log(err.message) });
-    axios.post('http://localhost:4008/events', event).catch((err) => { console.log(err.message) });
+    console.log(event);
+    axios.post('http://posts-cluster-srv:4000/events',event).catch((err)=>{console.log(err.message)});
+    // axios.post('http://localhost:4001/events', event).catch((err) => { console.log(err.message) });
+    // axios.post('http://localhost:4002/events', event).catch((err) => { console.log(err.message) });
+    // axios.post('http://localhost:4008/events', event).catch((err) => { console.log(err.message) });
 
 
     res.send({status: 'ok'});
