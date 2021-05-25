@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: comments
-          image: thapar/commentService:0.0.1
+          image: thapar/commentservice:0.0.1
 ---
 apiVersion: v1
 kind: Service
