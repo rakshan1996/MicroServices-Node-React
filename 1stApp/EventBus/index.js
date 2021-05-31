@@ -16,7 +16,7 @@ app.post('/events',(req,res) => {
     axios.post('http://posts-cluster-srv:4000/events',event).catch((err)=>{console.log(err.message)});
     axios.post('http://comments-cluster-srv:4001/events', event).catch((err) => { console.log(err.message) });
     axios.post('http://query-cluster-srv:4002/events', event).catch((err) => { console.log(err.message) });
-    axios.post('http:// moderation-cluster-srv:4008/events', event).catch((err) => { console.log(err.message) });
+    axios.post('http://moderation-cluster-srv:4008/events', event).catch((err) => { console.log(err.message) });
 
 
     res.send({status: 'ok'});

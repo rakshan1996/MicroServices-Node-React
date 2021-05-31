@@ -33,6 +33,7 @@ res.status(201).send(posts[id]);
 
 
 app.post('/events',(req,res) => {
+    console.log(req);
 res.send({});
 });
 
