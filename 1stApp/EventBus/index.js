@@ -12,7 +12,6 @@ const events=[];
 app.post('/events',(req,res) => {
     const event =req.body;
     events.push(event);
-    console.log(event);
     axios.post('http://posts-cluster-srv:4000/events',event).catch((err)=>{console.log(err.message)});
     axios.post('http://comments-cluster-srv:4001/events', event).catch((err) => { console.log(err.message) });
     axios.post('http://query-cluster-srv:4002/events', event).catch((err) => { console.log(err.message) });
